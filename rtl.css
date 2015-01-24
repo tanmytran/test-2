@@ -1,0 +1,515 @@
+/*
+Theme Name: SmartShop Lite
+Theme URI: http://ideaboxthemes.com/themes/smartshop-lite-wordpress-theme/
+Description: Adding support for language written in Right to Left (RTL) direction.
+Version: 1.2
+Author: IdeaBox Themes
+Author URI: http://ideaboxthemes.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+See: http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+
+/* ==========================================================================
+   Column & Row Setup
+   ========================================================================== */
+
+.col {
+    display: block;
+    float:right;
+    margin: 0 1.6% 0 0;
+}
+
+/* Remove the margin on the first column. Works on all browsers incl. IE7+ */
+.col:first-child { margin-right: 0; }
+
+
+
+/* ============================== */
+/* ! Default WordPress Classes    */
+/* ============================== */
+
+.gallery-caption {
+    right: 0;
+    text-align: right;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 0px 20px 20px;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 0px 20px 20px;
+}
+
+.wp-caption.alignright {
+    margin: 5px 20px 20px 0px;
+}
+
+
+.left, .alignleft, img[align="left"] {
+    float: right;
+}
+.right, .alignright, img[align="right"] {
+    float: left;
+}
+
+#wp-calendar caption {
+    text-align: right;
+}
+
+#wp-calendar #next {
+    text-align: left;
+}
+
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+body {	
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+
+.clearfix:after {
+    text-indent: 9999px; 
+}	
+
+
+#header-cart { 
+    text-align: left;
+}
+
+
+.header-widget
+{
+    text-align:left;
+}
+
+/********************************
+* main nav 
+********************************/
+
+.main-navigation ul.nav-menu,
+.main-navigation div.nav-menu > ul {
+    text-align: right;
+}
+
+.main-navigation li ul ul {
+    right: 100%;
+}
+
+
+/* ================================
+* Featured posts on front page 
+================================== */
+
+
+#featured-posts .wp-post-image,
+#featured-posts .thumb {
+    float: right; 
+    margin-left: 15px; 
+}
+
+#featured-posts .hentry
+{
+    margin-right:0px;
+}
+
+.home-featured-post .featured-post-content
+{
+    float:right;
+    margin-left:20px;
+}
+.home-featured-post:nth-of-type(4n+1) {
+    margin-right: 0;
+}
+
+.feature-more-link {
+    left: 0; 
+}
+
+/********************************
+     Gravity Form on Sidebar
+********************************/
+
+
+.right-sidebar .sidebar li.gform_widget
+{
+    margin-left:20px;
+}
+
+
+/********************************
+* general/main content
+********************************/
+
+
+#main-content .grid_8_of_12 {
+    margin-right: 0; 
+    padding-right: 0px; 
+}
+
+
+.hentry .attachment-thumbnail, 
+.hentry .attachment-post-thumb, 
+.hentry wp-post-image {
+    float:right;
+    margin-left:15px;
+    margin-right: 0px; 
+}	
+
+.hentry blockquote, .comment-body blockquote
+{
+    border-right:10px solid #ccc;
+    padding-right:12px;
+}
+
+.hentry table th, .comment-body table th
+{
+    text-align:right;
+}
+
+.hentry table td, .comment-body table td
+{
+    text-align:right;
+}
+
+
+.alignleft
+{
+    float: right;
+    margin: 5px 0px 20px 20px;
+}
+
+.alignright
+{
+    float: left;
+    margin: 5px 20px 20px 0px;
+}
+
+.aligncenter
+{
+    display: block;
+    margin: 5px auto 20px auto;
+}
+
+/********************************
+* Login Form
+********************************/
+
+.hentry #edd_login_form label {	
+    float: right;
+}
+
+/********************************
+* sidebar
+********************************/
+
+.right-sidebar {
+    float: left; 
+}
+
+.sidebar li.widget {
+    padding:0 0px 20px 20px;
+}
+
+.sidebar #searchinput {
+    padding: 8px 10px 8px 30px;
+}
+
+/*******************************/
+/* Home page featured products */
+/*******************************/
+
+
+#featured-products .product:nth-of-type(3n+1){ 
+    margin-right: 0;
+}
+
+#featured-products .product-info
+{
+    right:0;
+}
+
+
+/********************************
+* store template
+********************************/
+
+.store-template .product:nth-of-type(3n+1) {
+    margin-right:0; 
+}
+.store-template .last {
+    margin-left: 0px; 
+}
+
+/********************************
+* single product page
+********************************/
+
+.attachment-product-image-large {
+    float:right;
+}	
+
+/********************************
+* pagination
+********************************/
+
+.pagination a, .pagination span {
+    float: right;	
+}	
+
+
+.page-pagination
+{
+    margin:0px 30px 20px 0px;
+}
+
+.page-pagination a
+{
+    text-align:right;
+}
+
+/********************************
+* comments
+********************************/
+
+
+#commentsbox li { margin-bottom: 30px }
+.children {
+    padding-right:10px;
+}
+.children li.depth-2 { margin: 0 50px 0px 0px }
+.children li.depth-3 { margin: 0 50px 0px 0px }
+.children li.depth-4 { margin: 0 50px 0px 0px }
+.children li.depth-5 { margin: 0 50px 0px 0px }
+
+#commentsbox .avatar {
+    float: right;
+    margin-left: 30px;
+}
+
+.comment-author .avatar {
+    float: left; 
+}
+
+
+
+/* ==========================================================================
+IdeaBox Social Icons
+========================================================================== */
+
+.ideabox-social-icons ul li {
+    float: right;
+}
+
+/* Soliloquy */ 
+.soliloquy-container.soliloquy-theme-metro .soliloquy-caption {
+    bottom: 0 !important;
+    left: 0 !important;
+}
+
+/* ======================== */
+/* ! Theme Color Schemes	*/
+/* ======================== */
+
+/* ! Smart Shop red	*/
+.smart-shop-red .header-widget .smartshop-call,
+.smart-shop-red #footer,
+.smart-shop-red #featured-products .product-info,
+.smart-shop-red #page-header-container,
+.smart-shop-red .pagination a:hover, 
+.smart-shop-red  .pagination span.current,
+.smart-shop-red .page-pagination a:hover,
+.smart-shop-red .edd-submit.button.blue:hover,
+.smart-shop-red .main-navigation li ul li a,
+.smart-shop-red .main-navigation li a:hover,
+.smart-shop-red #home-cta-area,
+.smart-shop-red .gform_footer input[type=submit]:hover,
+.smart-shop-red .home-sidebar .sidebar .gform_footer input[type="submit"],
+.smart-shop-red .sidebar .wpcf7 .wpcf7-form input[type="submit"],
+.smart-shop-red .sidebar .gform_footer input[type="submit"],
+.smart-shop-red #commentsubmit
+
+{
+    background: #f84545;
+}
+
+.smart-shop-red .gform_footer input[type=submit]:hover,
+.smart-shop-red #commentsubmit
+{
+    color:#fff;
+}
+
+.smart-shop-red .main-navigation li ul li a:hover
+{
+    background: #fff;
+}
+.smart-shop-red .hentry #edd_login_form input[type="submit"]
+{
+    background:#f84545;
+    color:#fff;
+}
+
+.smart-shop-red  #home-widgets .fa, 
+.smart-shop-red .hentry .read-more,
+.smart-shop-red .product .title:hover,
+.smart-shop-red .sidebar li.widget ul a:hover,
+.smart-shop-red #logo-wrap h1 a,
+.smart-shop-red .gform_wrapper .gfield_required,
+.smart-shop-red .hentry a:hover
+{
+    color:#f84545;
+}
+
+.smart-shop-red ::selection
+{
+    background:#f84545;
+    color:#fff;
+}
+
+.smart-shop-red .sidebar .gform_footer input[type="submit"]:hover,
+.smart-shop-red .sidebar .wpcf7 .wpcf7-form input[type="submit"]:hover
+{
+    background:#fff;
+    color:#333;
+}
+
+
+/* =================================== */
+/* ! Full Width Layout   */
+/* =================================== */
+
+.full-width #home-featured-area {
+    padding-bottom: 20px; 
+}
+
+.full-width .hentry{
+    margin:0px 0px 20px 10px;
+}
+
+
+.full-width .sidebar li.widget{
+    padding:0 0 20px;
+}
+
+.full-width .right-sidebar .sidebar li.gform_widget{
+    margin-right:0px;
+    padding: 0 20px 20px;
+}
+
+.full-width #featured-posts{
+    padding:0 0 0 20px;
+}
+
+.full-width .comments{
+    margin:0 20px 20px 0;
+}
+
+
+.full-width .store-template .product:nth-of-type(3n+1) {
+    margin-left:0
+}
+
+.full-width .pagination{
+    margin:0 0 20px 0;
+}
+
+.full-width .header-extras{
+    float:right;
+}
+
+
+.full-width #logo-wrap{
+    padding:20px 0;
+}
+
+/* =================================== */
+/* ! iPhones   */
+/* =================================== */
+@media handheld, only screen and (max-width: 319px) {
+
+    body {
+
+    }
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+
+}
+
+@media only screen and (max-width: 1139px)
+{
+   
+    #footer-widgets .col grid_4_of_12
+    {
+        margin-left:0px;
+    }
+
+   
+}
+
+@media only screen and (max-width: 980px)
+{
+   
+    #footer-widgets .col grid_4_of_12
+    {
+        margin-left:0px;
+    }
+}
+
+
+@media only screen and (max-width: 767px)
+{
+    
+    .main-navigation li {
+        float:right;
+    }
+
+    .main-navigation li ul li
+    {
+        border-right:20px solid #111;
+    }
+
+    .main-navigation li ul ul {
+        right: 0px !important; 
+    }
+   
+    #main-content .right-sidebar
+    {
+        margin-right:20px;
+        padding-left:30px;
+    }
+
+    #front-featured-posts .home-sidebar
+    {
+        margin-right: 0; 
+    }
+
+}
+
+@media only screen and (max-width: 480px)
+{
+    .attachment-product-image-large
+    {
+        margin-right:0px;
+    }
+
+    #footer-widgets .last
+    {
+        margin-left:12px;
+    }
+}
